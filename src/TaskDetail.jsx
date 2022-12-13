@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const TaskDetail = () => {
@@ -6,6 +6,13 @@ const TaskDetail = () => {
   const { data, isPending, error } = useFetch(
     `http://localhost:8000/task/${id}`
   );
+  const history = useHistory();
+
+  const handleClick = () => {
+    fetch(`http://localhost:8000/task/${id}`, { method: "DELETE" }).then(() =>
+      history.push("/")
+    );
+  };
 
   return (
     <div className="task-detail">
@@ -15,6 +22,7 @@ const TaskDetail = () => {
         <article>
           <h2>{data.title}</h2>
           <p>{data.description}</p>
+          <button onClick={handleClick}>I've done this task</button>
         </article>
       )}
     </div>
