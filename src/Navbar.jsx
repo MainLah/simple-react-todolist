@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="navbar">
       <h2>ToDo App</h2>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a className="new-task-btn" href="#">
+          <Link className="new-task-btn" to="/newtask">
             New Task
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
