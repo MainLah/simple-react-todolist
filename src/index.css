@@ -53,6 +53,10 @@ body {
   flex-direction: column;
 }
 
+.loading {
+  text-align: center;
+}
+
 .task-box {
   display: flex;
   align-items: center;
