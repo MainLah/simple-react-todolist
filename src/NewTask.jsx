@@ -25,7 +25,7 @@ const NewTask = () => {
   return (
     <div className="create-task">
       {isPending ? (
-        <div>Loading...</div>
+        <div className="loading">Loading...</div>
       ) : (
         <form onSubmit={handleSubmit}>
           <label>What's the task?</label>
@@ -34,6 +34,7 @@ const NewTask = () => {
             placeholder="Your task..."
             required
             value={title}
+            id="task-title-input"
             onChange={(e) => setTitle(e.target.value)}
           />
           <label>Explain the task so you won't forget!</label>
@@ -42,6 +43,7 @@ const NewTask = () => {
             placeholder="Describe it"
             required
             value={description}
+            id="task-description-input"
             onChange={(e) => {
               setDescription(e.target.value);
             }}

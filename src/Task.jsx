@@ -6,7 +6,7 @@ const Task = ({ tasks }) => {
       {tasks &&
         tasks.map((task) => (
           <Link className="task-box" to={`/task/${task.id}`}>
-            <h3 className="task-preview-title">{task.title}</h3>
+            <p className="task-preview-title">{task.title}</p>
           </Link>
         ))}
     </div>

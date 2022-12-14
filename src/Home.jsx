@@ -9,7 +9,11 @@ const Home = () => {
       <h1>ToDo App</h1>
       {isPending && <div className="loading">Loading</div>}
       {error && <div>{error}</div>}
-      {data && <Task tasks={data} />}
+      {data && data.length <= 0 ? (
+        <h3>Create a new task!</h3>
+      ) : (
+        <Task tasks={data} />
+      )}
     </div>
   );
 };

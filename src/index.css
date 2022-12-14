@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -44,7 +45,8 @@ body {
   width: 100vw;
 }
 
-.home h1 {
+.home h1,
+.home h3 {
   margin: 3rem auto 1rem auto;
 }
 
@@ -66,7 +68,99 @@ body {
   box-shadow: 1px 1px 5px black;
 }
 
+.task-box {
+  color: black;
+  text-decoration: none;
+}
+
 .task-preview-title {
   font-weight: 400;
   margin-left: 1rem;
+}
+
+.task-detail article {
+  font-size: 18px;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-detail article button {
+  font-size: 18px;
+  margin: 3rem;
+  border: none;
+  height: 30px;
+  width: 200px;
+  background-color: tomato;
+  box-shadow: 3px 3px 1px black;
+}
+
+.task-detail article button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.task-detail article button:active {
+  transform: translate(3px, 3px);
+  transition: transform 0.03s;
+  box-shadow: none;
+}
+
+.create-task form {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-task form > * {
+  margin: 0.75rem;
+}
+
+.create-task label {
+  font-size: 18px;
+}
+
+#task-title-input {
+  height: 24px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+#task-title-input:focus {
+  outline: none;
+}
+
+#task-description-input {
+  height: 72px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+#task-description-input:focus {
+  outline: none;
+}
+
+.create-task button {
+  font-size: 18px;
+  margin: 3rem;
+  border: none;
+  height: 30px;
+  width: 200px;
+  background-color: tomato;
+  box-shadow: 3px 3px 1px black;
+}
+
+.create-task button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.create-task button:active {
+  transform: translate(3px, 3px);
+  transition: transform 0.03s;
+  box-shadow: none;
 }
