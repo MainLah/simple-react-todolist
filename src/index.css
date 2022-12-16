@@ -1,18 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Festive&family=Lekton&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Lekton", sans-serif;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: #e6e2c3;
+  color: #1c315e;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: tomato;
+  height: 150px;
+  background-color: #227c70;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
 }
 
 .navbar h2 {
@@ -31,7 +38,7 @@ body {
 .navbar ul li a {
   padding: 0.25rem 1rem 0.25rem 1rem;
   margin: 0.25rem 1rem 0.25rem 1rem;
-  color: black;
+  color: #1c315e;
   text-decoration: none;
 }
 
@@ -39,14 +46,17 @@ body {
   color: white;
 }
 
-.home {
+.content-wrapper {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  margin: 0 auto 0 auto;
+  height: 100vh;
+  width: 600px;
+  background-color: #88a47c;
 }
 
-.home h1,
-.home h3 {
+#home h1,
+#home h3 {
   margin: 3rem auto 1rem auto;
 }
 
@@ -66,11 +76,9 @@ body {
   width: 500px;
   height: 75px;
   box-shadow: 1px 1px 5px black;
-}
-
-.task-box {
   color: black;
   text-decoration: none;
+  background-color: #e6e2c3;
 }
 
 .task-preview-title {
@@ -78,31 +86,47 @@ body {
   margin-left: 1rem;
 }
 
-.task-detail article {
+.task-detail .card {
+  margin-top: 8rem;
+  height: 593px;
+  width: 373px;
+  background-color: #d9d9d9;
+}
+
+.task-detail .card > * {
+  margin-left: 1rem;
+}
+
+.task-detail .card h2 {
+  font-size: 48px;
+}
+
+.task-detail .card p {
+  font-size: 20px;
+}
+
+.task-detail .content-wrapper {
   font-size: 18px;
-  margin: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.task-detail article button {
+.task-detail .content-wrapper button {
   font-size: 18px;
-  margin: 3rem;
   border: none;
   height: 30px;
   width: 200px;
-  background-color: tomato;
+  background-color: #1c315e;
+  color: #e6e2c3;
   box-shadow: 3px 3px 1px black;
 }
 
-.task-detail article button:hover {
-  color: white;
+.task-detail .content-wrapper button:hover {
   cursor: pointer;
 }
 
-.task-detail article button:active {
+.task-detail .content-wrapper button:active {
   transform: translate(3px, 3px);
   transition: transform 0.03s;
   box-shadow: none;
@@ -150,12 +174,12 @@ body {
   border: none;
   height: 30px;
   width: 200px;
-  background-color: tomato;
+  background-color: #1c315e;
+  color: #e6e2c3;
   box-shadow: 3px 3px 1px black;
 }
 
 .create-task button:hover {
-  color: white;
   cursor: pointer;
 }
 
@@ -163,4 +187,34 @@ body {
   transform: translate(3px, 3px);
   transition: transform 0.03s;
   box-shadow: none;
+}
+
+@media screen and (max-height: 720px) {
+  .navbar {
+    height: 90px;
+    font-size: 24px;
+  }
+
+  .content-wrapper {
+    height: 100vh;
+    width: 450px;
+  }
+
+  .content-wrapper .task-box {
+    width: 350px;
+  }
+
+  .content-wrapper .card {
+    margin-top: 3rem;
+    height: 493px;
+    width: 273px;
+  }
+
+  .task-detail .card h2 {
+    font-size: 32px;
+  }
+
+  .task-detail .card p {
+    font-size: 16px;
+  }
 }

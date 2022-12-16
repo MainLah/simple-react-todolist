@@ -27,29 +27,31 @@ const NewTask = () => {
       {isPending ? (
         <div className="loading">Loading...</div>
       ) : (
-        <form onSubmit={handleSubmit}>
-          <label>What's the task?</label>
-          <input
-            type="text"
-            placeholder="Your task..."
-            required
-            value={title}
-            id="task-title-input"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <label>Explain the task so you won't forget!</label>
-          <input
-            type="text"
-            placeholder="Describe it"
-            required
-            value={description}
-            id="task-description-input"
-            onChange={(e) => {
-              setDescription(e.target.value);
-            }}
-          />
-          <button>Add Task</button>
-        </form>
+        <div className="content-wrapper">
+          <form onSubmit={handleSubmit}>
+            <label>What's the task?</label>
+            <input
+              type="text"
+              placeholder="Your task..."
+              required
+              value={title}
+              id="task-title-input"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <label>Explain the task so you won't forget!</label>
+            <input
+              type="text"
+              placeholder="Describe it"
+              required
+              value={description}
+              id="task-description-input"
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+            />
+            <button>Add Task</button>
+          </form>
+        </div>
       )}
     </div>
   );

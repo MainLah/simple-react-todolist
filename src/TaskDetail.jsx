@@ -19,11 +19,13 @@ const TaskDetail = () => {
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {data && (
-        <article>
-          <h2>{data.title}</h2>
-          <p>{data.description}</p>
-          <button onClick={handleClick}>I've done this task</button>
-        </article>
+        <div className="content-wrapper">
+          <div className="card">
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
+            <button onClick={handleClick}>I've done this task</button>
+          </div>
+        </div>
       )}
     </div>
   );
